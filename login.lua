@@ -1,5 +1,5 @@
 function Main()
-menu = gg.choice({'🔵Dragon City🔵','🔵Monster Legends🔵'},nil, '🔵Game Tool🔵')
+menu = gg.choice({'🔵Dran City🔵','🔵Monster Legends🔵'},nil, '🔵Game Tool🔵')
 if menu == 1 then as() 
 while true do
 if gg.isVisible() then
