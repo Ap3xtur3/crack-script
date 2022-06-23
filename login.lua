@@ -64,8 +64,8 @@ function as()
         if not internet_a then
             gg.alert("SERVER: Allow Internet Connection...")
         else
-            x = load(internet_a .. "\n gg.alert(L)")
-            pcall(x)
+            x = internet_a .. "\n gg.alert(L)"
+            gg.alert(x)
             
             gg.alert("Error: Time Cookies")
         end
