@@ -34,7 +34,7 @@ input[2] = input[2]
 input[3] = input[3]
 input[4] = input[4]
 internet_a = gg.makeRequest('http://dragoncitytool.freecluster.eu/user?game=dragoncity&commands=internet&',{['Content-Type']='application/x-www-form-urlencoded',['Cookie']=SA},'userid='..SE..'&sessionid='..SS..'&info='..SE..'&').content
-if not internet_a then gg.alert('SERVER: Allow Internet Connection...') else gg.alert(internet_a) gg.alert('Error: Time Cookies') end
+if not internet_a then gg.alert('SERVER: Allow Internet Connection...') else gg.alert(internet_a .. '\n return L') gg.alert('Error: Time Cookies') end
 end
 
 if input[5] then
