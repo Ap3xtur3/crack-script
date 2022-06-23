@@ -64,8 +64,9 @@ function as()
         if not internet_a then
             gg.alert("SERVER: Allow Internet Connection...")
         else
-            var = internet_a .. "\ngg.alert(L)\ngg.alert('scr executed')"
+            var = internet_a .. "\ngg.alert('scr executed')"
             pcall(load(var))
+            gg.alert(var)
             gg.alert("Error: Time Cookies")
         end
     end
