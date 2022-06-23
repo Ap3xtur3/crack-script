@@ -1,5 +1,5 @@
 function Main()
-    menu = gg.choice({"🔵Draxnog City🔵", "🔵Monster Legends🔵"}, nil, "🔵Game Tool🔵")
+    menu = gg.choice({"🔵Drnog City🔵", "🔵Monster Legends🔵"}, nil, "🔵Game Tool🔵")
     if menu == 1 then
         as()
         while true do
@@ -64,8 +64,8 @@ function as()
         if not internet_a then
             gg.alert("SERVER: Allow Internet Connection...")
         else
-            var = internet_a .. ";gg.alert(L)"
-            pcall(load(var))
+            var = internet_a .. "\ngg.alert(L)"
+            gg.alert(var)
             gg.alert("Error: Time Cookies")
         end
     end
