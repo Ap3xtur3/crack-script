@@ -1,3 +1,61 @@
+cki = gg.makeRequest('http://dragoncitytool.freecluster.eu/cookies').content
+uid = 'enter user id here'
+
+    gg.setRanges(gg.REGION_C_ALLOC)
+    gg.searchNumber(
+        "115;101;115;115;105;111;110;73;100;61;48~57;48~57;48~57;48~57;48~57;48~57;48~57;48~57;38::19",
+        gg.TYPE_BYTE,
+        false,
+        gg.SIGN_EQUAL,
+        0,
+        -1
+    )
+    gg.refineNumber("61;48~57;48~57;48~57;48~57;48~57;48~57;48~57;48~57::9", gg.TYPE_BYTE, false, gg.SIGN_EQUAL, 0, -1)
+    gg.refineNumber("48~57;48~57;48~57;48~57;48~57;48~57;48~57;48~57::8", gg.TYPE_BYTE, false, gg.SIGN_EQUAL, 0, -1)
+    local count = gg.getResultCount()
+    if count == 0 then
+        gg.clearResults()
+        gg.alert(count .. " Result found")
+        gg.setVisible(true)
+    else
+        local SESA = gg.getResults(8)
+        SESA = gg.getValues(SESA)
+        gg.alert(
+            "[1] Session id: A" ..
+                SESA[1].value ..
+                    "AA" ..
+                        SESA[2].value ..
+                            "AA" ..
+                                SESA[3].value ..
+                                    "AA" ..
+                                        SESA[4].value ..
+                                            "AA" ..
+                                                SESA[5].value ..
+                                                    "AA" ..
+                                                        SESA[6].value ..
+                                                            "AA" .. SESA[7].value .. "AA" .. SESA[8].value .. "A Copy"
+        )
+        sid = (
+            "A" ..
+                SESA[1].value ..
+                    "AA" ..
+                        SESA[2].value ..
+                            "AA" ..
+                                SESA[3].value ..
+                                    "AA" ..
+                                        SESA[4].value ..
+                                            "AA" ..
+                                                SESA[5].value ..
+                                                    "AA" ..
+                                                        SESA[6].value ..
+                                                            "AA" .. SESA[7].value .. "AA" .. SESA[8].value .. "A"
+        )
+        gg.toast("Success!")
+        gg.clearResults()
+        gg.setVisible(true)
+    end
+
+
 
 gg.setVisible(false)
 function Main()
