@@ -1,4 +1,4 @@
-Spoof the login logic to copy the response from login.lua.(Query must be fresh.)
+Spoof the login logic(the login.lua in this repo is already modified to do so.) to copy the response from login.lua.(Query must be fresh.)
 
 
 gg.copyText(var, false)
