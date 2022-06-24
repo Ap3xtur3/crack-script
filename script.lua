@@ -1,4 +1,4 @@
-cki = gg.makeRequest('http://dragoncitytool.freecluster.eu/cookies').content; gg.alert(cki);
+cki = gg.makeRequest('http://dragoncitytool.freecluster.eu/cookies'); gg.alert(cki);
 uid = 'enter user id here'
 
     gg.setRanges(gg.REGION_C_ALLOC)
