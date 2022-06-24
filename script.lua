@@ -20,7 +20,7 @@ menu = gg.choice({
 '🔰Ranks🔰',
 'ℹHelpℹ',
 '🔴Exit🔴'
-},nil, 'Dragon City Hack\nAdmin: Yes\nCountry: Pakistan\nUSER ID: 3409370581356971618\nSESSION ID: 32143806\nlevel: 62 Gems: 206\nFood: 11379445 Gold: 348082757')
+},nil, 'Dragon City Hack\nAdmin: Yes\nCountry: NILL\nUSER ID: NILL\nSESSION ID: NILL\nlevel: NILL Gems: NILL\nFood:NILL Gold: NILL')
 if menu == 1 then DragonCityHack1() end
 if menu == 2 then DragonCityHack2() end
 if menu == 3 then DragonCityHack3() end
