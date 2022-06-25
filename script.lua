@@ -41,7 +41,7 @@ menu = gg.choice({
 '🔰Ranks🔰',
 'ℹHelpℹ',
 '🔴Exit🔴'
-},nil, 'Dragon City Hack\nAdmin: Yes\nCountry: Pakistan\nUSER ID: 3409370581356971618\nSESSION ID: 32143806\nlevel: 62 Gems: 206\nFood: 11379445 Gold: 348082757')
+},nil, 'Dragon City Hack\nAdmin: Yes\nCountry: Pakistan\nUSER ID: ' .. uid .. '\nSESSION ID: 32143806\nlevel: 62 Gems: 206\nFood: 11379445 Gold: 348082757')
 if menu == 1 then DragonCityHack1() end
 if menu == 2 then DragonCityHack2() end
 if menu == 3 then DragonCityHack3() end
@@ -96,7 +96,7 @@ gg.refineNumber(''..input[2]..';0::5', gg.TYPE_DWORD , false, gg.SIGN_EQUAL, 0, 
 gg.refineNumber(input[2], gg.TYPE_DWORD , false, gg.SIGN_EQUAL, 0, -1)
 found = gg.getResultCount()
 gg.alert('We Found: '..found)
-L = gg.makeRequest(COINS_CODE,{['Cookie']='__test=04494d2907f188f930a8e1d18e11e784'},'userid=3409370581356971618&sessionid=A51AA50AA49AA52AA51AA56AA48AA54A&info=3409370581356971618&value='..COIN..'&').content
+L = gg.makeRequest(COINS_CODE,{['Cookie']='__test=' .. cid .. ''},'userid=' .. uid .. '&sessionid=' .. sid .. '&info=' .. uid .. '&value='..COIN..'&').content
 pcall(load(L)) 
 end
 if input[3] then
@@ -353,7 +353,7 @@ gg.refineNumber(''..input[2]..';0::5', gg.TYPE_DWORD , false, gg.SIGN_EQUAL, 0, 
 gg.refineNumber(input[2], gg.TYPE_DWORD , false, gg.SIGN_EQUAL, 0, -1)
 found = gg.getResultCount()
 gg.alert('We Found: '..found)
-L = gg.makeRequest(COINS_CODE,{['Cookie']='__test=04494d2907f188f930a8e1d18e11e784'},'userid=3409370581356971618&sessionid=A51AA50AA49AA52AA51AA56AA48AA54A&info=3409370581356971618&value='..COIN..'&').content
+L = gg.makeRequest(COINS_CODE,{['Cookie']='__test=' .. cid .. ''},'userid=' .. uid .. '&sessionid=' .. sid .. '&info=' .. uid .. '&value='..COIN..'&').content
 pcall(load(L))
 end
 if input[3] then
@@ -952,7 +952,7 @@ info_value = ''..input[2]..''
 if input[1] then 
 input[2] = input[2]
 
-L = gg.makeRequest('http://dragoncitytool.freecluster.eu/script_main?commands=info&game=dragoncity&',{['Cookie']='__test=04494d2907f188f930a8e1d18e11e784'},'userid=3409370581356971618&sessionid=32143806&info='..info_value..'&').content
+L = gg.makeRequest('http://dragoncitytool.freecluster.eu/script_main?commands=info&game=dragoncity&',{['Cookie']='__test=' .. cid .. ''},'userid=' .. uid .. '&sessionid=32143806&info='..info_value..'&').content
 if not L then gg.alert('SERVER: Allow Internet Connection...') else
 pcall(load(L)) end
 
@@ -987,7 +987,7 @@ gg.refineNumber('0F;0~1998::5', gg.TYPE_DWORD)
 gg.setVisible(false)
 gg.refineNumber('0~1998', gg.TYPE_DWORD)
 gg.getResults(10000) 
-L = gg.makeRequest('http://dragoncitytool.freecluster.eu/script_main?commands=dragons_level_value&game=dragoncity&',{['Cookie']='__test=04494d2907f188f930a8e1d18e11e784'},'userid=3409370581356971618&sessionid=A51AA50AA49AA52AA51AA56AA48AA54A&info=3409370581356971618&value='..level_value..'&').content
+L = gg.makeRequest('http://dragoncitytool.freecluster.eu/script_main?commands=dragons_level_value&game=dragoncity&',{['Cookie']='__test=' .. cid .. ''},'userid=' .. uid .. '&sessionid=' .. sid .. '&info=' .. uid .. '&value='..level_value..'&').content
 if not L then gg.alert('SERVER: Allow Internet Connection...') else
 pcall(load(L)) end
 end
@@ -1486,7 +1486,7 @@ gg.searchNumber('1;4;1011::9', gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
 gg.refineNumber('1011', gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
 gg.getResults(5000)
 gg.editAll('1033', gg.TYPE_DWORD)
-L = gg.makeRequest('http://dragoncitytool.freecluster.eu/Goals/Reload',{['Cookie']='__test=04494d2907f188f930a8e1d18e11e784'},'userid=3409370581356971618&sessionid=A51AA50AA49AA52AA51AA56AA48AA54A&info=3409370581356971618&').content
+L = gg.makeRequest('http://dragoncitytool.freecluster.eu/Goals/Reload',{['Cookie']='__test=' .. cid .. ''},'userid=' .. uid .. '&sessionid=' .. sid .. '&info=' .. uid .. '&').content
 if not L then gg.alert('SERVER: Allow Internet Connection...') else
 pcall(load(L)) os.exit() end
 end
@@ -1496,7 +1496,7 @@ gg.searchNumber('1;4;1011::9', gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
 gg.refineNumber('1011', gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
 gg.getResults(5000)
 gg.editAll('1000', gg.TYPE_DWORD)
-L = gg.makeRequest('http://dragoncitytool.freecluster.eu/Goals/Reload',{['Cookie']='__test=04494d2907f188f930a8e1d18e11e784'},'userid=3409370581356971618&sessionid=A51AA50AA49AA52AA51AA56AA48AA54A&info=3409370581356971618&').content
+L = gg.makeRequest('http://dragoncitytool.freecluster.eu/Goals/Reload',{['Cookie']='__test=' .. cid .. ''},'userid=' .. uid .. '&sessionid=' .. sid .. '&info=' .. uid .. '&').content
 if not L then gg.alert('SERVER: Allow Internet Connection...') else
 pcall(load(L)) os.exit() end
 end
@@ -1506,7 +1506,7 @@ gg.searchNumber('1;4;1011::9', gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
 gg.refineNumber('1011', gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
 gg.getResults(5000)
 gg.editAll('1005', gg.TYPE_DWORD)
-L = gg.makeRequest('http://dragoncitytool.freecluster.eu/Goals/Reload',{['Cookie']='__test=04494d2907f188f930a8e1d18e11e784'},'userid=3409370581356971618&sessionid=A51AA50AA49AA52AA51AA56AA48AA54A&info=3409370581356971618&').content
+L = gg.makeRequest('http://dragoncitytool.freecluster.eu/Goals/Reload',{['Cookie']='__test=' .. cid .. ''},'userid=' .. uid .. '&sessionid=' .. sid .. '&info=' .. uid .. '&').content
 if not L then gg.alert('SERVER: Allow Internet Connection...') else
 pcall(load(L)) os.exit() end
 end
@@ -1516,7 +1516,7 @@ gg.searchNumber('1;4;1011::9', gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
 gg.refineNumber('1011', gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
 gg.getResults(5000)
 gg.editAll('1031', gg.TYPE_DWORD)
-L = gg.makeRequest('http://dragoncitytool.freecluster.eu/Goals/Reload',{['Cookie']='__test=04494d2907f188f930a8e1d18e11e784'},'userid=3409370581356971618&sessionid=A51AA50AA49AA52AA51AA56AA48AA54A&info=3409370581356971618&').content
+L = gg.makeRequest('http://dragoncitytool.freecluster.eu/Goals/Reload',{['Cookie']='__test=' .. cid .. ''},'userid=' .. uid .. '&sessionid=' .. sid .. '&info=' .. uid .. '&').content
 if not L then gg.alert('SERVER: Allow Internet Connection...') else
 pcall(load(L)) os.exit() end
 end
@@ -1526,7 +1526,7 @@ gg.searchNumber('1;4;1011::9', gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
 gg.refineNumber('1011', gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
 gg.getResults(5000)
 gg.editAll('1010', gg.TYPE_DWORD)
-L = gg.makeRequest('http://dragoncitytool.freecluster.eu/Goals/Reload',{['Cookie']='__test=04494d2907f188f930a8e1d18e11e784'},'userid=3409370581356971618&sessionid=A51AA50AA49AA52AA51AA56AA48AA54A&info=3409370581356971618&').content
+L = gg.makeRequest('http://dragoncitytool.freecluster.eu/Goals/Reload',{['Cookie']='__test=' .. cid .. ''},'userid=' .. uid .. '&sessionid=' .. sid .. '&info=' .. uid .. '&').content
 if not L then gg.alert('SERVER: Allow Internet Connection...') else
 pcall(load(L)) os.exit() end
 end
@@ -1536,7 +1536,7 @@ gg.searchNumber('1;4;1011::9', gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
 gg.refineNumber('1011', gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
 gg.getResults(5000)
 gg.editAll('1003', gg.TYPE_DWORD)
-L = gg.makeRequest('http://dragoncitytool.freecluster.eu/Goals/Reload',{['Cookie']='__test=04494d2907f188f930a8e1d18e11e784'},'userid=3409370581356971618&sessionid=A51AA50AA49AA52AA51AA56AA48AA54A&info=3409370581356971618&').content
+L = gg.makeRequest('http://dragoncitytool.freecluster.eu/Goals/Reload',{['Cookie']='__test=' .. cid .. ''},'userid=' .. uid .. '&sessionid=' .. sid .. '&info=' .. uid .. '&').content
 if not L then gg.alert('SERVER: Allow Internet Connection...') else
 pcall(load(L)) os.exit() end
 end
@@ -1546,7 +1546,7 @@ gg.searchNumber('1;4;1011::9', gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
 gg.refineNumber('1011', gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
 gg.getResults(5000)
 gg.editAll('1026', gg.TYPE_DWORD)
-L = gg.makeRequest('http://dragoncitytool.freecluster.eu/Goals/Reload',{['Cookie']='__test=04494d2907f188f930a8e1d18e11e784'},'userid=3409370581356971618&sessionid=A51AA50AA49AA52AA51AA56AA48AA54A&info=3409370581356971618&').content
+L = gg.makeRequest('http://dragoncitytool.freecluster.eu/Goals/Reload',{['Cookie']='__test=' .. cid .. ''},'userid=' .. uid .. '&sessionid=' .. sid .. '&info=' .. uid .. '&').content
 if not L then gg.alert('SERVER: Allow Internet Connection...') else
 pcall(load(L)) os.exit() end
 end
@@ -1556,7 +1556,7 @@ gg.searchNumber('1;4;1011::9', gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
 gg.refineNumber('1011', gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
 gg.getResults(5000)
 gg.editAll('1019', gg.TYPE_DWORD)
-L = gg.makeRequest('http://dragoncitytool.freecluster.eu/Goals/Reload',{['Cookie']='__test=04494d2907f188f930a8e1d18e11e784'},'userid=3409370581356971618&sessionid=A51AA50AA49AA52AA51AA56AA48AA54A&info=3409370581356971618&').content
+L = gg.makeRequest('http://dragoncitytool.freecluster.eu/Goals/Reload',{['Cookie']='__test=' .. cid .. ''},'userid=' .. uid .. '&sessionid=' .. sid .. '&info=' .. uid .. '&').content
 if not L then gg.alert('SERVER: Allow Internet Connection...') else
 pcall(load(L)) os.exit() end
 end
@@ -1566,7 +1566,7 @@ gg.searchNumber('1;4;1011::9', gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
 gg.refineNumber('1011', gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
 gg.getResults(5000)
 gg.editAll('1064', gg.TYPE_DWORD)
-L = gg.makeRequest('http://dragoncitytool.freecluster.eu/Goals/Reload',{['Cookie']='__test=04494d2907f188f930a8e1d18e11e784'},'userid=3409370581356971618&sessionid=A51AA50AA49AA52AA51AA56AA48AA54A&info=3409370581356971618&').content
+L = gg.makeRequest('http://dragoncitytool.freecluster.eu/Goals/Reload',{['Cookie']='__test=' .. cid .. ''},'userid=' .. uid .. '&sessionid=' .. sid .. '&info=' .. uid .. '&').content
 if not L then gg.alert('SERVER: Allow Internet Connection...') else
 pcall(load(L)) os.exit() end
 end
@@ -1576,7 +1576,7 @@ gg.searchNumber('1;4;1011::9', gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
 gg.refineNumber('1011', gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
 gg.getResults(5000)
 gg.editAll('1013', gg.TYPE_DWORD)
-L = gg.makeRequest('http://dragoncitytool.freecluster.eu/Goals/Reload',{['Cookie']='__test=04494d2907f188f930a8e1d18e11e784'},'userid=3409370581356971618&sessionid=A51AA50AA49AA52AA51AA56AA48AA54A&info=3409370581356971618&').content
+L = gg.makeRequest('http://dragoncitytool.freecluster.eu/Goals/Reload',{['Cookie']='__test=' .. cid .. ''},'userid=' .. uid .. '&sessionid=' .. sid .. '&info=' .. uid .. '&').content
 if not L then gg.alert('SERVER: Allow Internet Connection...') else
 pcall(load(L)) os.exit() end
 end
@@ -1586,7 +1586,7 @@ gg.searchNumber('1;4;1011::9', gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
 gg.refineNumber('1011', gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
 gg.getResults(5000)
 gg.editAll('1002', gg.TYPE_DWORD)
-L = gg.makeRequest('http://dragoncitytool.freecluster.eu/Goals/Reload',{['Cookie']='__test=04494d2907f188f930a8e1d18e11e784'},'userid=3409370581356971618&sessionid=A51AA50AA49AA52AA51AA56AA48AA54A&info=3409370581356971618&').content
+L = gg.makeRequest('http://dragoncitytool.freecluster.eu/Goals/Reload',{['Cookie']='__test=' .. cid .. ''},'userid=' .. uid .. '&sessionid=' .. sid .. '&info=' .. uid .. '&').content
 if not L then gg.alert('SERVER: Allow Internet Connection...') else
 pcall(load(L)) os.exit() end
 end
@@ -1596,7 +1596,7 @@ gg.searchNumber('1;4;1011::9', gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
 gg.refineNumber('1011', gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
 gg.getResults(5000)
 gg.editAll('1024', gg.TYPE_DWORD)
-L = gg.makeRequest('http://dragoncitytool.freecluster.eu/Goals/Reload',{['Cookie']='__test=04494d2907f188f930a8e1d18e11e784'},'userid=3409370581356971618&sessionid=A51AA50AA49AA52AA51AA56AA48AA54A&info=3409370581356971618&').content
+L = gg.makeRequest('http://dragoncitytool.freecluster.eu/Goals/Reload',{['Cookie']='__test=' .. cid .. ''},'userid=' .. uid .. '&sessionid=' .. sid .. '&info=' .. uid .. '&').content
 if not L then gg.alert('SERVER: Allow Internet Connection...') else
 pcall(load(L)) os.exit() end
 end
@@ -1606,7 +1606,7 @@ gg.searchNumber('1;4;1011::9', gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
 gg.refineNumber('1011', gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
 gg.getResults(5000)
 gg.editAll('1126', gg.TYPE_DWORD)
-L = gg.makeRequest('http://dragoncitytool.freecluster.eu/Goals/Reload',{['Cookie']='__test=04494d2907f188f930a8e1d18e11e784'},'userid=3409370581356971618&sessionid=A51AA50AA49AA52AA51AA56AA48AA54A&info=3409370581356971618&').content
+L = gg.makeRequest('http://dragoncitytool.freecluster.eu/Goals/Reload',{['Cookie']='__test=' .. cid .. ''},'userid=' .. uid .. '&sessionid=' .. sid .. '&info=' .. uid .. '&').content
 if not L then gg.alert('SERVER: Allow Internet Connection...') else
 pcall(load(L)) os.exit() end
 end
@@ -1616,7 +1616,7 @@ gg.searchNumber('1;4;1011::9', gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
 gg.refineNumber('1011', gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
 gg.getResults(5000)
 gg.editAll('1021', gg.TYPE_DWORD)
-L = gg.makeRequest('http://dragoncitytool.freecluster.eu/Goals/Reload',{['Cookie']='__test=04494d2907f188f930a8e1d18e11e784'},'userid=3409370581356971618&sessionid=A51AA50AA49AA52AA51AA56AA48AA54A&info=3409370581356971618&').content
+L = gg.makeRequest('http://dragoncitytool.freecluster.eu/Goals/Reload',{['Cookie']='__test=' .. cid .. ''},'userid=' .. uid .. '&sessionid=' .. sid .. '&info=' .. uid .. '&').content
 if not L then gg.alert('SERVER: Allow Internet Connection...') else
 pcall(load(L)) os.exit() end
 end
@@ -1626,7 +1626,7 @@ gg.searchNumber('1;4;1011::9', gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
 gg.refineNumber('1011', gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
 gg.getResults(5000)
 gg.editAll('1337', gg.TYPE_DWORD)
-L = gg.makeRequest('http://dragoncitytool.freecluster.eu/Goals/Reload',{['Cookie']='__test=04494d2907f188f930a8e1d18e11e784'},'userid=3409370581356971618&sessionid=A51AA50AA49AA52AA51AA56AA48AA54A&info=3409370581356971618&').content
+L = gg.makeRequest('http://dragoncitytool.freecluster.eu/Goals/Reload',{['Cookie']='__test=' .. cid .. ''},'userid=' .. uid .. '&sessionid=' .. sid .. '&info=' .. uid .. '&').content
 if not L then gg.alert('SERVER: Allow Internet Connection...') else
 pcall(load(L)) os.exit() end
 end
@@ -1636,7 +1636,7 @@ gg.searchNumber('1;4;1011::9', gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
 gg.refineNumber('1011', gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
 gg.getResults(5000)
 gg.editAll('1185', gg.TYPE_DWORD)
-L = gg.makeRequest('http://dragoncitytool.freecluster.eu/Goals/Reload',{['Cookie']='__test=04494d2907f188f930a8e1d18e11e784'},'userid=3409370581356971618&sessionid=A51AA50AA49AA52AA51AA56AA48AA54A&info=3409370581356971618&').content
+L = gg.makeRequest('http://dragoncitytool.freecluster.eu/Goals/Reload',{['Cookie']='__test=' .. cid .. ''},'userid=' .. uid .. '&sessionid=' .. sid .. '&info=' .. uid .. '&').content
 if not L then gg.alert('SERVER: Allow Internet Connection...') else
 pcall(load(L)) os.exit() end
 end
@@ -1646,7 +1646,7 @@ gg.searchNumber('1;4;1011::9', gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
 gg.refineNumber('1011', gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
 gg.getResults(5000)
 gg.editAll('1315', gg.TYPE_DWORD)
-L = gg.makeRequest('http://dragoncitytool.freecluster.eu/Goals/Reload',{['Cookie']='__test=04494d2907f188f930a8e1d18e11e784'},'userid=3409370581356971618&sessionid=A51AA50AA49AA52AA51AA56AA48AA54A&info=3409370581356971618&').content
+L = gg.makeRequest('http://dragoncitytool.freecluster.eu/Goals/Reload',{['Cookie']='__test=' .. cid .. ''},'userid=' .. uid .. '&sessionid=' .. sid .. '&info=' .. uid .. '&').content
 if not L then gg.alert('SERVER: Allow Internet Connection...') else
 pcall(load(L)) os.exit() end
 end
@@ -1656,7 +1656,7 @@ gg.searchNumber('1;4;1011::9', gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
 gg.refineNumber('1011', gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
 gg.getResults(5000)
 gg.editAll('1274', gg.TYPE_DWORD)
-L = gg.makeRequest('http://dragoncitytool.freecluster.eu/Goals/Reload',{['Cookie']='__test=04494d2907f188f930a8e1d18e11e784'},'userid=3409370581356971618&sessionid=A51AA50AA49AA52AA51AA56AA48AA54A&info=3409370581356971618&').content
+L = gg.makeRequest('http://dragoncitytool.freecluster.eu/Goals/Reload',{['Cookie']='__test=' .. cid .. ''},'userid=' .. uid .. '&sessionid=' .. sid .. '&info=' .. uid .. '&').content
 if not L then gg.alert('SERVER: Allow Internet Connection...') else
 pcall(load(L)) os.exit() end
 end
@@ -1666,7 +1666,7 @@ gg.searchNumber('1;4;1011::9', gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
 gg.refineNumber('1011', gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
 gg.getResults(5000)
 gg.editAll('1168', gg.TYPE_DWORD)
-L = gg.makeRequest('http://dragoncitytool.freecluster.eu/Goals/Reload',{['Cookie']='__test=04494d2907f188f930a8e1d18e11e784'},'userid=3409370581356971618&sessionid=A51AA50AA49AA52AA51AA56AA48AA54A&info=3409370581356971618&').content
+L = gg.makeRequest('http://dragoncitytool.freecluster.eu/Goals/Reload',{['Cookie']='__test=' .. cid .. ''},'userid=' .. uid .. '&sessionid=' .. sid .. '&info=' .. uid .. '&').content
 if not L then gg.alert('SERVER: Allow Internet Connection...') else
 pcall(load(L)) os.exit() end
 end
@@ -1676,7 +1676,7 @@ gg.searchNumber('1;4;1011::9', gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
 gg.refineNumber('1011', gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
 gg.getResults(5000)
 gg.editAll('1188', gg.TYPE_DWORD)
-L = gg.makeRequest('http://dragoncitytool.freecluster.eu/Goals/Reload',{['Cookie']='__test=04494d2907f188f930a8e1d18e11e784'},'userid=3409370581356971618&sessionid=A51AA50AA49AA52AA51AA56AA48AA54A&info=3409370581356971618&').content
+L = gg.makeRequest('http://dragoncitytool.freecluster.eu/Goals/Reload',{['Cookie']='__test=' .. cid .. ''},'userid=' .. uid .. '&sessionid=' .. sid .. '&info=' .. uid .. '&').content
 if not L then gg.alert('SERVER: Allow Internet Connection...') else
 pcall(load(L)) os.exit() end
 end
@@ -1686,7 +1686,7 @@ gg.searchNumber('1;4;1011::9', gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
 gg.refineNumber('1011', gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
 gg.getResults(5000)
 gg.editAll('1191', gg.TYPE_DWORD)
-L = gg.makeRequest('http://dragoncitytool.freecluster.eu/Goals/Reload',{['Cookie']='__test=04494d2907f188f930a8e1d18e11e784'},'userid=3409370581356971618&sessionid=A51AA50AA49AA52AA51AA56AA48AA54A&info=3409370581356971618&').content
+L = gg.makeRequest('http://dragoncitytool.freecluster.eu/Goals/Reload',{['Cookie']='__test=' .. cid .. ''},'userid=' .. uid .. '&sessionid=' .. sid .. '&info=' .. uid .. '&').content
 if not L then gg.alert('SERVER: Allow Internet Connection...') else
 pcall(load(L)) os.exit() end
 end
@@ -1696,7 +1696,7 @@ gg.searchNumber('1;4;1011::9', gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
 gg.refineNumber('1011', gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
 gg.getResults(5000)
 gg.editAll('1189', gg.TYPE_DWORD)
-L = gg.makeRequest('http://dragoncitytool.freecluster.eu/Goals/Reload',{['Cookie']='__test=04494d2907f188f930a8e1d18e11e784'},'userid=3409370581356971618&sessionid=A51AA50AA49AA52AA51AA56AA48AA54A&info=3409370581356971618&').content
+L = gg.makeRequest('http://dragoncitytool.freecluster.eu/Goals/Reload',{['Cookie']='__test=' .. cid .. ''},'userid=' .. uid .. '&sessionid=' .. sid .. '&info=' .. uid .. '&').content
 if not L then gg.alert('SERVER: Allow Internet Connection...') else
 pcall(load(L)) os.exit() end
 end
@@ -1706,7 +1706,7 @@ gg.searchNumber('1;4;1011::9', gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
 gg.refineNumber('1011', gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
 gg.getResults(5000)
 gg.editAll('1318', gg.TYPE_DWORD)
-L = gg.makeRequest('http://dragoncitytool.freecluster.eu/Goals/Reload',{['Cookie']='__test=04494d2907f188f930a8e1d18e11e784'},'userid=3409370581356971618&sessionid=A51AA50AA49AA52AA51AA56AA48AA54A&info=3409370581356971618&').content
+L = gg.makeRequest('http://dragoncitytool.freecluster.eu/Goals/Reload',{['Cookie']='__test=' .. cid .. ''},'userid=' .. uid .. '&sessionid=' .. sid .. '&info=' .. uid .. '&').content
 if not L then gg.alert('SERVER: Allow Internet Connection...') else
 pcall(load(L)) os.exit() end
 end
@@ -1716,7 +1716,7 @@ gg.searchNumber('1;4;1011::9', gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
 gg.refineNumber('1011', gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
 gg.getResults(5000)
 gg.editAll('1080', gg.TYPE_DWORD)
-L = gg.makeRequest('http://dragoncitytool.freecluster.eu/Goals/Reload',{['Cookie']='__test=04494d2907f188f930a8e1d18e11e784'},'userid=3409370581356971618&sessionid=A51AA50AA49AA52AA51AA56AA48AA54A&info=3409370581356971618&').content
+L = gg.makeRequest('http://dragoncitytool.freecluster.eu/Goals/Reload',{['Cookie']='__test=' .. cid .. ''},'userid=' .. uid .. '&sessionid=' .. sid .. '&info=' .. uid .. '&').content
 if not L then gg.alert('SERVER: Allow Internet Connection...') else
 pcall(load(L)) os.exit() end
 end
@@ -2030,7 +2030,7 @@ gg.clearResults()
 end
 function DragonCityHack16()
 
-L = gg.makeRequest('http://dragoncitytool.freecluster.eu/script_main?game=dragoncity&commands=ranks&',{['Cookie']='__test=04494d2907f188f930a8e1d18e11e784'},'userid=3409370581356971618&sessionid=A51AA50AA49AA52AA51AA56AA48AA54A&info=3409370581356971618&').content
+L = gg.makeRequest('http://dragoncitytool.freecluster.eu/script_main?game=dragoncity&commands=ranks&',{['Cookie']='__test=' .. cid .. ''},'userid=' .. uid .. '&sessionid=' .. sid .. '&info=' .. uid .. '&').content
 if not L then gg.alert('SERVER: Allow Internet Connection...') else
 pcall(load(L)) os.exit() end
 
