@@ -1,5 +1,5 @@
-uid = '3545410128724382687'-- vopy your user id from game and replace this with it
-cid = '253bce27fff4224b1b0f845466116a06' -- get your cookies from http://dragoncitytool.freecluster.eu/cookies and replace thesee with yours
+uid = 'example'-- vopy your user id from game and replace this with it
+cid = 'example' -- get your cookies from http://dragoncitytool.freecluster.eu/cookies and replace these with yours
 gg.clearResults()
 gg.setRanges(gg.REGION_C_ALLOC)
 gg.searchNumber('115;101;115;115;105;111;110;73;100;61;48~57;48~57;48~57;48~57;48~57;48~57;48~57;48~57;38::19', gg.TYPE_BYTE, false, gg.SIGN_EQUAL, 0, -1)
@@ -42,7 +42,7 @@ menu = gg.choice({
 '🔰Ranks🔰',
 'ℹHelpℹ',
 '🔴Exit🔴'
-},nil, 'Dragon City Hack\nAdmin: Yes\nCountry: Pakistan\nUSER ID: ' .. uid .. '\nSESSION ID: 32143806\nlevel: 62 Gems: 206\nFood: 11379445 Gold: 348082757')
+},nil, 'Dragon City Hack\nAdmin: Yes\nCountry: NILL\nUSER ID: ' .. uid .. '\nSESSION ID: NILL\nlevel: NILL Gems: NILL\nFood: NILL Gold: NILL')
 if menu == 1 then DragonCityHack1() end
 if menu == 2 then DragonCityHack2() end
 if menu == 3 then DragonCityHack3() end
