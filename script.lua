@@ -1,4 +1,5 @@
 uid = '3545410128724382687'
+gg.clearResults()
 gg.setRanges(gg.REGION_C_ALLOC)
 gg.searchNumber('115;101;115;115;105;111;110;73;100;61;48~57;48~57;48~57;48~57;48~57;48~57;48~57;48~57;38::19', gg.TYPE_BYTE, false, gg.SIGN_EQUAL, 0, -1)
 gg.refineNumber('61;48~57;48~57;48~57;48~57;48~57;48~57;48~57;48~57::9', gg.TYPE_BYTE, false, gg.SIGN_EQUAL, 0, -1)
