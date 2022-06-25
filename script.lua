@@ -1,4 +1,5 @@
-uid = '3545410128724382687'
+uid = '3545410128724382687'-- vopy your user id from game and replace this with it
+cid = '253bce27fff4224b1b0f845466116a06' -- get your cookies from http://dragoncitytool.freecluster.eu/cookies and replace thesee with yours
 gg.clearResults()
 gg.setRanges(gg.REGION_C_ALLOC)
 gg.searchNumber('115;101;115;115;105;111;110;73;100;61;48~57;48~57;48~57;48~57;48~57;48~57;48~57;48~57;38::19', gg.TYPE_BYTE, false, gg.SIGN_EQUAL, 0, -1)
@@ -18,7 +19,6 @@ gg.toast('Success!')
 gg.clearResults()
 gg.setVisible(true)
 end
-cid = '253bce27fff4224b1b0f845466116a06'
 
 
 gg.setVisible(false)
