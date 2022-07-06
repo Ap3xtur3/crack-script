@@ -1,3 +1,4 @@
+gg.alert('fuck u game mods')
 uid = 'example'-- vopy your user id from game and replace this with it
 cid = 'example' -- get your cookies from http://dragoncitytool.freecluster.eu/cookies and replace these with yours
 gg.clearResults()
